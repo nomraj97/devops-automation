@@ -16,7 +16,7 @@ pipeline {
 
         stage('CHECKOUT CODE') {
             steps {
-                git branch: 'main', url: 'https://github.com/Praveeen1996/devops-automation.git'
+                git branch: 'main', url: 'https://github.com/nomraj97/devops-automation.git'
             }
         }
         stage('BUILD-TOOL') {
@@ -26,7 +26,7 @@ pipeline {
         }
         stage('DOCKER BUILD'){
             steps{
-                sh "docker build . -t praveenhema/devops-integration:${DOCKER_TAG} "
+                sh "docker build . -t nomraj97/devops-integration:${DOCKER_TAG} "
             }
         }
         stage('DOCKERHUB PUSH'){
